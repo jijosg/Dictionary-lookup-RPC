@@ -1,6 +1,5 @@
-=======================================  
 Dictionatry lookup using SUN RPC
-=======================================  
+---  
 1. Pre-requisites  
    Install portmap using the following command:  
    ```bash
