@@ -6,6 +6,7 @@ Dictionatry lookup using SUN RPC
    sudo yum install rpcbind-0.2.0-11.el6.i686
    ```
 3. Run the following sequence of commands to get the executable server and client program rdict and rdictd: 
+```bash
 cc -c rdict_clnt.c
 cc -c rdict_cif.c
 cc -c rdict.c
@@ -17,15 +18,24 @@ cc -c rdict_srp.c
 cc -o rdictd rdict_svc.o rdict_sif.o rdict_srp.o rdict_xdr.o
 chmod 755 rdict
 chmod 755 rdictd
+```
 
 4. Run the daemon first (preferably in background, this is the server)
+```bash
 ./rdictd &
+```
+
 
 5. Run following command(this is the client):
+```bash
 ./rdict
+```
+
 
 6. It waits for user input. Following are the possible options
-        a. I                    (allows initiating the dictionary).
-        b. i <word> <meaning>   (allows inserting a word, with its meaning. Example: i party a social gathering of invited guests)
-        c. l <word>             (allows finding if a word is there in the dictionary. Example: l party)
-        d. d <word>             (allows deleting a word from the dictionary)
+```bash
+a. I                    (allows initiating the dictionary).
+b. i <word> <meaning>   (allows inserting a word, with its meaning. Example: i party a social gathering of invited guests)
+c. l <word>             (allows finding if a word is there in the dictionary. Example: l party)
+d. d <word>             (allows deleting a word from the dictionary)
+```
